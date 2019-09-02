@@ -1,7 +1,9 @@
 /* eslint no-undef: "off" */
 
 import test from 'tape';
-import harden from '../src/index';
+// import harden from '../src/index';
+import harden1 from '../src/deepFreeze';
+
 export default function runTests(harden=harden1) {
 
 test('harden', t => {

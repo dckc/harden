@@ -1,0 +1,16 @@
+{
+  "include": [
+    "$(MODDABLE)/examples/manifest_base.json"
+  ],
+  "strip": [],
+  "creation": {
+    "stack": 4096
+  },
+  "modules": {
+    "main": [ "./test-xs-main" ],
+    "./test/*": [ "./test/*" ],
+    "./src/*": [ "./src/*" ],
+    "tape": [ "./node_modules/@agoric/tape-xs/tape" ],
+    "xs-platform/*": [ "./node_modules/@agoric/tape-xs/*" ]
+  }
+}
