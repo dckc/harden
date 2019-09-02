@@ -2,6 +2,7 @@
 
 import test from 'tape';
 import harden from '../src/index';
+export default function runTests(harden=harden1) {
 
 test('harden', t => {
   const o = { a: {} };
@@ -86,3 +87,9 @@ test('harden async generator', t => {
   t.ok(Object.isFrozen(o));
   t.end();
 });
+
+}
+
+if (typeof require !== 'undefined' && typeof module !== 'undefined') {
+  runTests(harden0);
+}
